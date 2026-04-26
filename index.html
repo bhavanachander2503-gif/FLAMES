@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES - Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="glass-card">
+            <h1>🔥 FLAMES</h1>
+            <p>Discover your relationship status</p>
+            
+            <div class="input-group">
+                <input type="text" id="name1" placeholder="Enter Your Name" autocomplete="off">
+                <input type="text" id="name2" placeholder="Enter Partner's Name" autocomplete="off">
+            </div>
+
+            <button id="calculateBtn" onclick="checkFlames()">Check FLAMES</button>
+        </div>
+    </div>
+
+    <!-- Custom Dialogue Box (Modal) -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="resultTitle">Relationship Status</h2>
+            <div id="resultIcon">❤️</div>
+            <p id="resultText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>     
