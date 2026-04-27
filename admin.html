@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 🔒 Login Section -->
+        <div id="loginSection" class="glass-card">
+            <h2>Admin Login</h2>
+            <p>Enter the secret code to view records</p>
+            <input type="password" id="passcode" placeholder="Enter Code" autocomplete="off">
+            <button onclick="checkCode()">Unlock Dashboard</button>
+            <p id="errorMsg" class="error">Incorrect Code!</p>
+        </div>
+
+        <!-- 📊 Dashboard Section (Hidden by default) -->
+        <div id="dashboardSection" class="glass-card dashboard" style="display: none;">
+            <h2>🔥 FLAMES Records</h2>
+            <p>Live view of all tested names</p>
+            
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Person 1</th>
+                            <th>Person 2</th>
+                            <th>Result</th>
+                            <th>Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be injected here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Firebase as a module -->
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
